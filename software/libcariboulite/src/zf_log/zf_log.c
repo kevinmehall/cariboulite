@@ -1223,7 +1223,7 @@ static void put_msg(zf_log_message *const msg,
 static void put_color(zf_log_message *const msg, const int lvl)
 {
 	char* col = font_colors[ lvl & 0x7 ];
-	int n = snprintf(msg->p, nprintf_size(msg), col);
+	int n = snprintf(msg->p, nprintf_size(msg), "%s", col);
 	put_nprintf(msg, n);
 }
 
